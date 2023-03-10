@@ -7,10 +7,12 @@ package com.mycompany.csc325_oop_designreview_lab;
 /**
  *
  * @author MoaathAlrajab
+ * @author Michael LaNasa
  */
 public class Student extends Human {
-    // Add field for GPA    
+    // Add fields for GPA and credits
     private double GPA;
+    private int credits;
     
     // ToDo 1: Make this class a child of Person
     // ToDo 1: Make this class a child of Human
@@ -23,8 +25,16 @@ public class Student extends Human {
     /*
     constructor takes in the minimum 2 parameters
     */
-    public Student(String name, short age) {
+    public Student(String name, int age) {
         super(name, age);
+    }
+    
+    /*
+    constructor that takes 3 parameters
+    */
+    public Student(String name, int age, int credits) {
+        super(name, age);
+        this.credits = credits;
     }
     
     /*
@@ -63,4 +73,19 @@ public class Student extends Human {
     }
 	
     // ToDo 4: Add comments to your code
+    
+    /*
+    Getter method for credits member variable
+    Returns Student credits
+    */
+    public int getCredits() {
+        return this.credits;
+    }
+    
+    /*
+    Setter method for credits member variable
+    */
+    public void setCredits(int c) {
+        this.credits = c;
+    }
 }
