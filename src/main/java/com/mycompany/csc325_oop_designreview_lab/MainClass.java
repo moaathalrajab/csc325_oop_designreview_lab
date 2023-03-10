@@ -7,6 +7,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 /**
  *
  * @author MoaathAlrajab
+ * @author Michael LaNasa
  */
 public class MainClass {
 
@@ -25,9 +26,9 @@ public class MainClass {
 		Student std1= new Student("James", 20);
                 // ToDo 10: Add a toString method for Senior class
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
+		Student frsh1 = new Freshman("James", 20, 12); // name, age, credits
 
-                Senior std2 = new Student("John", 30, 90);
+                Student std2 = new Senior("John", 30, 90);
 
 		// ToDo 8: Set the gpa of the student using the scanner and user
 		// ToDo 11: Set the gpa of the student using the scanner and user
