@@ -88,4 +88,15 @@ public class Student extends Human {
     public void setCredits(int c) {
         this.credits = c;
     }
+    
+    /* 
+    toString method
+    Returns Student member variables in tidy String format
+    */
+    @Override
+    public String toString() {
+        return "Student Name: " + this.getName() + 
+                "\nStudent Age: " + this.getAge() + 
+                "\nStudent GPA: " + this.getGPA() + "\n";
+    }
 }
