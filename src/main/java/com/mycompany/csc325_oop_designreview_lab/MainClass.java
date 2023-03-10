@@ -4,9 +4,12 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MoaathAlrajab
+ * @author Michael LaNasa
  */
 public class MainClass {
 
@@ -25,14 +28,30 @@ public class MainClass {
 		Student std1= new Student("James", 20);
                 // ToDo 10: Add a toString method for Senior class
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
+		Student frsh1 = new Freshman("James", 20, 12); // name, age, credits
 
-                Senior std2 = new Student("John", 30, 90);
+                Student std2 = new Senior("John", 30, 90);
 
 		// ToDo 8: Set the gpa of the student using the scanner and user
 		// ToDo 11: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
 
+                // create scanner object for user input
+                Scanner s = new Scanner(System.in);
+                
+                // print instructions for user
+                System.out.println("Enter GPA for student 1:");
+                // store user input in variable
+                double gpa = s.nextDouble();
+                // set student GPA to user input
+                std1.setGPA(gpa);
+                
+                // repeat instructions for student 2
+                System.out.println("Enter GPA for student 2:");
+                gpa = s.nextDouble();
+                // set student GPA to user input
+                std2.setGPA(gpa);
+                
 		System.out.println(std1);
 
                 System.out.println(std2);

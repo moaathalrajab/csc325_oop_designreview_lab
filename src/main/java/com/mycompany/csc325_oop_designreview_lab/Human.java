@@ -7,14 +7,15 @@ package com.mycompany.csc325_oop_designreview_lab;
 /**
  *
  * @author MoaathAlrajab
+ * @author Michael LaNasa
  */
 public abstract class Human {
-    private String name;
-	private String address;
-	private short age;
+        private String name;
+	protected String address;
+	private int age;
 
 	// constructor that takes only two paras
-	public Human(String name, short age) {
+	public Human(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
@@ -32,11 +33,11 @@ public abstract class Human {
 	public abstract void setAddress(String address);
 
 
-	public short getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(short age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 }
