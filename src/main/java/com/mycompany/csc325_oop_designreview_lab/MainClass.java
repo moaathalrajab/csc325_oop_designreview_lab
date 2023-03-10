@@ -1,48 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.csc325_oop_designreview_lab;
+
+import java.util.Scanner;
 
 /**
  *
- * @author MoaathAlrajab
+ * @author Thuan Luu
  */
 public class MainClass {
 
- public static void main(String[] args) {
-		// ToDo 5: Fix the error
+    public static void main(String[] args) {
+        //Constructor calls
+        Freshman std1 = new Freshman("Sarah", 15, "42 Michagan Dr", 12);
+        Senior std2 = new Senior("John", 18, "34 Pine Ave", 90);
 
-		// ToDo 6: Fix the constructor of Student class
+        //Create scanenr for input
+        Scanner input = new Scanner(System.in);
 
-                // Todo 7: Create two classes for Freshman and Senior 
+        //Take inputs
+        System.out.println("Set the gpa for students");
+        System.out.println("Enter a number to set the GPA of student #1: ");
+        double grade1 = input.nextDouble();
+        System.out.println("Enter a number to set the GPA of student #2: ");
+        double grade2 = input.nextDouble();
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+        //Set Student GPAs
+        std1.setGPA(grade1);
+        std2.setGPA(grade2);
 
-		// ToDo 7: Add a toString method for Student class
-		// ToDo 9: Add a toString method for Freshman class
-
-		Student std1= new Student("James", 20);
-                // ToDo 10: Add a toString method for Senior class
-
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 8: Set the gpa of the student using the scanner and user
-		// ToDo 11: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 9: add comments and explain your code
-		// ToDo 12: add comments and explain your code
-
-		// ToDo 10: submit using a pull request.
-		// ToDo 13: submit using a pull request.
-	}
+        //Print results with calls to toString()
+        System.out.println(std1);
+        System.out.println(std2);
+    }
 
 }
-
