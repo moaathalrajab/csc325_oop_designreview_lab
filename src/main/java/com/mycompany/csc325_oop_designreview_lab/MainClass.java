@@ -4,45 +4,47 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MoaathAlrajab
  */
 public class MainClass {
 
- public static void main(String[] args) {
-		// ToDo 5: Fix the error
+	public static void main(String[] args) throws Exception {
 
-		// ToDo 6: Fix the constructor of Student class
+		// Creating instances of both the freshman and senior classes
+		Freshman std1 = new Freshman("James", (short) 20, 12); // name, age, credits
+		Senior std2 = new Senior("John", (short) 30, 90);
 
-                // Todo 7: Create two classes for Freshman and Senior 
+		// Printing out the students information using the toString method.
+		System.out.println(std1);
+		System.out.println();
+		System.out.println(std2);
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+		// Creating an instance of the Scanner class to get user input
+		Scanner scnr = new Scanner(System.in);
 
-		// ToDo 7: Add a toString method for Student class
-		// ToDo 9: Add a toString method for Freshman class
-
-		Student std1= new Student("James", 20);
-                // ToDo 10: Add a toString method for Senior class
-
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 8: Set the gpa of the student using the scanner and user
-		// ToDo 11: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
+		System.out.println("Enter GPA for student 1: ");
+		double userInput = scnr.nextDouble();
+		std1.setGPA(userInput); // Setting student 1s GPA using user input.
 		System.out.println(std1);
 
-                System.out.println(std2);
+		System.out.println();
 
-		// ToDo 9: add comments and explain your code
-		// ToDo 12: add comments and explain your code
+		System.out.println("Enter GPA for student 2: ");
+		double userInputTwo = scnr.nextDouble();
+		std2.setGPA(userInputTwo); // Setting student 1s GPA using user input.
+		System.out.println(std2);
 
-		// ToDo 10: submit using a pull request.
-		// ToDo 13: submit using a pull request.
+		System.out.println();
+		scnr.close();
+
+		// Testing if you can create an instance of Senior with less than 85 credits
+		System.out.println("Testing if a senior can have less than 85 credits");
+		Senior std3 = new Senior("Mike", (short) 22, 80);
+
 	}
 
 }
-
