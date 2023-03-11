@@ -1,42 +1,79 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.csc325_oop_designreview_lab;
 
 /**
  *
- * @author MoaathAlrajab
+ * @author Thuan Luu
  */
 public abstract class Human {
-    private String name;
-	private String address;
-	private short age;
 
-	// constructor that takes only two paras
-	public Human(String name, short age) {
-		this.name = name;
-		this.age = age;
-	}
+    protected String name; // The name of the student
+    protected String address; // The address of the student
+    protected short age; // The age of the student
 
-	public String getName() {
-		return name;
-	}
+    /**
+     * constructor with parameters.
+     *
+     * @param name Student's name.
+     * @param age Student's age.
+     * @param address Student's address.
+     */
+    public Human(String name, short age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * Returns the name of the student
+     *
+     * @return the name of the student
+     */
+    public String getName() {
+        return name;
+    }
 
-	public abstract String getAddress() ;
+    /**
+     * Sets the name of the student
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public abstract void setAddress(String address);
+    /**
+     * Returns the address of the student
+     *
+     * @return the address of the student
+     */
+    public String getAddress() {
+        return address;
+    }
 
+    /**
+     * Sets the address of the student
+     *
+     * @param address
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public short getAge() {
-		return age;
-	}
+    /**
+     * Returns the age of the student
+     *
+     * @return the age of the student
+     */
+    public short getAge() {
+        return age;
+    }
 
-	public void setAge(short age) {
-		this.age = age;
-	}
+    /**
+     * Sets the age of the student
+     *
+     * @param age
+     */
+    public void setAge(short age) {
+        this.age = age;
+    }
 }
