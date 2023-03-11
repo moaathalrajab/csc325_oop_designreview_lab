@@ -64,4 +64,14 @@ public class Student extends Human {
         }
 	
 	// ToDo 4: Add comments to your code
+        
+        /**
+         * Overridden toString method
+         * @return 
+         */
+        @Override
+        public String toString() {
+            String result = "Name: " + super.getName() + " Age: " + super.getAge() + " Address: " + address + " GPA: " + gpa;
+            return result;
+        }
 }
