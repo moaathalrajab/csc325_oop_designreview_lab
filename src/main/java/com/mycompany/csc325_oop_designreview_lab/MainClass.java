@@ -38,7 +38,6 @@ public class MainClass {
 
 		// ToDo 13: add comments and explain your code
 
-		// ToDo 14: submit using a pull request.
 	}
 
 }
