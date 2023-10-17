@@ -10,7 +10,7 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public abstract class Human {
     private String name;
-	private String address;
+	public String address;
 	private short age;
 
 	// constructor that takes only two paras
