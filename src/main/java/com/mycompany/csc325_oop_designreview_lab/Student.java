@@ -8,12 +8,39 @@ package com.mycompany.csc325_oop_designreview_lab;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Human
+public class Student extends Human { // Student class is a child of Human
+    private double GPA; // Field for GPA
 
-	// ToDo 2: Fix the resulting errors
+    // Fixed constructor of the Student class
+    public Student(String name, short age, double GPA) {
+        super(name, age); // Calls the Human constructor
+        this.GPA = GPA;
+    }
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    // Setter and getter for GPA
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "Student { Name: " + getName() + ", Age: " + getAge() + ", GPA: " + GPA + " }";
+    }
+
+    @Override
+    public String getAddress() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void setAddress(String address) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
+
+
